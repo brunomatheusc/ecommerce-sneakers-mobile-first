@@ -1,5 +1,4 @@
 import styled, { css } from 'styled-components';
-import Link from 'next/link';
 
 const media = css`
 	@media screen and (max-width: 768px) {
@@ -11,6 +10,21 @@ const media = css`
 		padding: 2rem;
 		background-color: var(--white-color);
 		transition: .5s;
+	}
+`;
+
+const navActive = css`
+	position: relative;
+
+	&::before {
+		content: '';
+		position: absolute;
+		bottom: -.5rem;
+		left: 45%;
+		width: 4px;
+		height: 4px;
+		background-color: var(--dark-color);
+		border-radius: 50%;
 	}
 `;
 
@@ -36,14 +50,21 @@ export const Nav = styled.nav`
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+
+	> a {
+		font-weight: var(--font-semi-bold) !important;
+	}
 `;
 
-export const NavItem = styled.li`
+export const NavItem = styled.li<{active: boolean}>`
 	margin-bottom: var(--mb-4);
-`;
 
-export const NavLogo = styled(Link)`
-	font-weight: var(--font-semi-bold);
+	a {
+		${({ active }) => active && css`
+			${navActive};
+		`};
+	}
+
 `;
 
 const navToggleShop = css`

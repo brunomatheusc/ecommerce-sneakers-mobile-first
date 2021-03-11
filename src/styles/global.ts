@@ -1,12 +1,6 @@
 import { createGlobalStyle } from "styled-components";
 
 export default createGlobalStyle`
-	* {
-		margin: 0;
-		padding: 0;
-		box-sizing: border-box;
-	}
-
 	:root {
 		--header-height: 3rem;
 
@@ -39,72 +33,91 @@ export default createGlobalStyle`
 		--rotate-img: rotate(-30deg);
 
 		@media screen and (min-width: 768px) {
-			--big-font-size: 1.55rem;
-			--bigger-font-size: 2rem;
-			--biggest-font-size: 3rem;
-			--normal-font-size: 1rem;
-			--smalle-font-size: .875rem;
+			:root {
+				--big-font-size: 1.55rem;
+				--bigger-font-size: 2rem;
+				--biggest-font-size: 3rem;
+				--normal-font-size: 1rem;
+				--smalle-font-size: .875rem;
+			}
 		}
+	}
 
-		*,::before,::after {
-			box-sizing: border-box;
-		}
+	*, ::before, ::after {
+		box-sizing: border-box;
+	}
 
-		html {
-			scroll-behavior: smooth;
-		}
+	html {
+		scroll-behavior: smooth;
+	}
 
-		body {
-			margin: var(--header-height);
-			font-family: var(--body-font);
-			font-size: var(--normal-font-size);
-			font-weight: var(--font-medium);
-			color: var(--dark-color);
-			line-height: 1.6;
-		}
+	body {
+		margin: var(--header-height) 0 0 0;
+		font-family: var(--body-font);
+		font-size: var(--normal-font-size);
+		font-weight: var(--font-medium);
+		color: var(--dark-color);
+		line-height: 1.6;
+	}
 
-		h1, h2, h3, p, ul {
-			margin: 0;
-		}
+	h1, h2, h3, p, ul {
+		margin: 0;
+	}
 
-		ul {
-			padding: 0;
-			list-style: none;
-		}
+	ul {
+		padding: 0;
+		list-style: none;
+	}
 
-		a {
-			text-decoration: none;
-			color: var(--dark-color);
-		}
+	a {
+		text-decoration: none;
+		color: var(--dark-color);
+	}
 
-		img {
-			max-width: 100%;
-			height: auto;
-			display: block;
-		}
+	img {
+		max-width: 100%;
+		height: auto;
+		display: block;
+	}
 
-		.section {
-			padding: 5rem 0 2rem;
-		}
+	.section {
+		padding: 5rem 0 2rem;
+	}
 
-		.section-title {
-			position: relative;
-			font-size: var(--big-font-size);
-			margin-bottom: var(--mb-4);
-			text-align: center;
-			letter-spacing: .1rem;
-		}
+	.section-title {
+		position: relative;
+		font-size: var(--big-font-size);
+		margin-bottom: var(--mb-4);
+		text-align: center;
+		letter-spacing: .1rem;
+	}
 
-		.section-title::after {
-			content: '';
-			position: absolute;
-			width: 56px;
-			height: .18rem;
-			top: --1rem;
-			left: 0;
-			right: 0;
-			margin: auto;
-			background-color: var(--dark-color);
-		}
+	.section-title::after {
+		content: '';
+		position: absolute;
+		width: 56px;
+		height: .18rem;
+		top: -1rem;
+		left: 0;
+		right: 0;
+		margin: auto;
+		background-color: var(--dark-color);
+	}
+
+	.bd-grid {
+		max-width: 1024px;
+		display: grid;
+		grid-template-columns: 100%;
+		column-gap: 2rem;
+		width: calc(100% - 2rem);
+		margin-left: var(--mb-2);
+		margin-right: var(--mb-2);
+	}
+
+	.button-light {
+		display: inline-block;
+		color: var(--dark-color);
+		font-weight: var(--font-bold);
+		align-items: center;
 	}
 `;

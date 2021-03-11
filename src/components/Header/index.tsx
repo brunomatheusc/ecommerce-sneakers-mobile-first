@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react';
-import { Container, Nav, NavToggle, NavItem, NavLogo, Menu } from './styles';
+import React, { useState } from 'react';
+import { Container, Nav, NavToggle, NavItem, Menu } from './styles';
 import { BsGrid3X3Gap, BsBag } from 'react-icons/bs';
 import Link from 'next/link';
 
@@ -13,15 +13,15 @@ export default function Header() {
 					<BsGrid3X3Gap />
 				</NavToggle>
 
-				<NavLogo href="#">Roby</NavLogo>
+				<Link href="#">Roby</Link>
 
 				<Menu className="nav__menu" show={showMenu}>
 					<ul className="nav__list">
-						<NavItem className="nav__item" onClick={() => setShowMenu(false)}><Link href="/">Home</Link></NavItem>
-						<NavItem className="nav__item" onClick={() => setShowMenu(false)}><Link href="#">Featured</Link></NavItem>
-						<NavItem className="nav__item" onClick={() => setShowMenu(false)}><Link href="#">Women</Link></NavItem>
-						<NavItem className="nav__item" onClick={() => setShowMenu(false)}><Link href="#">New</Link></NavItem>
-						<NavItem className="nav__item" onClick={() => setShowMenu(false)}><Link href="#">Shop</Link></NavItem>
+						<NavItem className="nav__item" onClick={() => setShowMenu(false)} active={true}><Link href="/">Home</Link></NavItem>
+						<NavItem className="nav__item" onClick={() => setShowMenu(false)} active={false}><Link href="#">Featured</Link></NavItem>
+						<NavItem className="nav__item" onClick={() => setShowMenu(false)} active={false}><Link href="#">Women</Link></NavItem>
+						<NavItem className="nav__item" onClick={() => setShowMenu(false)} active={false}><Link href="#">New</Link></NavItem>
+						<NavItem className="nav__item" onClick={() => setShowMenu(false)} active={false}><Link href="#">Shop</Link></NavItem>
 					</ul>
 				</Menu>
 
