@@ -1,10 +1,11 @@
 import React from 'react';
-import Link from 'next/link';
+import { BsArrowRight } from 'react-icons/bs';
 
 import { CollectionSection, CollectionContainer, CollectionCard, CollectionData, CollectionName, ColectionDescription, CollectionImage } from './styles';
 
 import collection1 from '../../../assets/collection1.png';
 import collection2 from '../../../assets/collection1.png';
+import Button from '../../../components/Button';
 
 export default function Collection() {
 	return (
@@ -14,7 +15,7 @@ export default function Collection() {
 					<CollectionData>
 						<CollectionName>Nike</CollectionName>
 						<ColectionDescription>New collection 2020</ColectionDescription>
-						<Link href="#">Buy now</Link>
+						<Button href="#" type="light">Buy now <BsArrowRight /></Button>
 					</CollectionData>
 
 					<CollectionImage src={collection1} />
@@ -24,7 +25,7 @@ export default function Collection() {
 					<CollectionData>
 						<CollectionName>Nike</CollectionName>
 						<ColectionDescription>New collection 2020</ColectionDescription>
-						<Link href="#">Buy now</Link>
+						<Button href="#" type="light">Buy now <BsArrowRight /></Button>
 					</CollectionData>
 
 					<CollectionImage src={collection2} />

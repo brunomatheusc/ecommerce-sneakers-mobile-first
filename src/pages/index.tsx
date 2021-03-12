@@ -1,11 +1,14 @@
 import Head from 'next/head';
 import Header from '../components/Header';
 
-import { Main, HomeSection, Container, Sneaker, Data, Shape, HomeImage, New, Title, Description, Button } from '../styles/pages/Home';
+import { Main, HomeSection, Container, Sneaker, Data, Shape, HomeImage, New, Title, Description } from '../styles/pages/Home';
 import imgHome from '../assets/imghome.png';
 import Featured from './components/Featured';
 import Collection from './components/Collection';
 import WomenSneakers from './components/WomenSneakers';
+import Offer from './components/Offer';
+import NewCollection from './components/NewCollection';
+import Button from '../components/Button';
 
 export default function Home() {
 	return (
@@ -30,7 +33,7 @@ export default function Home() {
 							<Title>YEEZY BOOST <br/> SPLY - 350</Title>
 							<Description>Explore the new collections of sneakers</Description>
 							
-							<Button>Explore now</Button>
+							<Button href="#">Explore now</Button>
 						</Data>
 					</Container>
 				</HomeSection>
@@ -40,6 +43,10 @@ export default function Home() {
 				<Collection />
 
 				<WomenSneakers />
+
+				<Offer />
+
+				<NewCollection />
 			</Main>
 		</>
 	)

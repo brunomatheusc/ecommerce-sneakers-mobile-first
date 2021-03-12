@@ -23,13 +23,6 @@ export const CollectionCard = styled.div`
 
 export const CollectionData = styled.div`
     align-self: flex-end;
-
-	> a {
-		display: inline-block;
-		color: var(--dark-color);
-		font-weight: var(--font-bold);
-		align-items: center;
-	}
 `;
 
 export const CollectionName = styled.h3`
