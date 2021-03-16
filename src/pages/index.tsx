@@ -9,6 +9,8 @@ import WomenSneakers from './components/WomenSneakers';
 import Offer from './components/Offer';
 import NewCollection from './components/NewCollection';
 import Button from '../components/Button';
+import Newsletter from './components/Newsletter';
+import Footer from './components/Footer';
 
 export default function Home() {
 	return (
@@ -47,6 +49,10 @@ export default function Home() {
 				<Offer />
 
 				<NewCollection />
+
+				<Newsletter />
+
+				<Footer />
 			</Main>
 		</>
 	)
