@@ -41,7 +41,11 @@ export const HomeImage = styled.img`
 	transform: var(--rotate-img);
 `;
 
-export const Data = styled.div``;
+export const Data = styled.div`
+	> a {
+		display: inline-block;
+	}
+`;
 
 export const New = styled.span`
 	display: block;

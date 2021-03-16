@@ -1,8 +1,8 @@
 import React from 'react';
-import Link from 'next/link';
 import { OfferSection, OfferContainer, OfferData, OfferTitle, OfferDescription, OfferImg } from './styles';
 
 import offerImg from '../../../assets/offert.png';
+import Button from '../../../components/Button';
 
 export default function Offer() {
 	return (
@@ -11,7 +11,7 @@ export default function Offer() {
 				<OfferData>
 					<OfferTitle>50% OFF</OfferTitle>
 					<OfferDescription>In Adidas Superstar sneakers</OfferDescription>
-					<Link href="#">Shop Now</Link>
+					<Button href="#" type="normal">Shop Now</Button>
 				</OfferData>
 
 				<OfferImg src={offerImg} />

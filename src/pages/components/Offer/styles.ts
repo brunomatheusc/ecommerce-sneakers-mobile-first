@@ -13,6 +13,10 @@ export const OfferContainer = styled.div`
 export const OfferData = styled.div`
     padding: 4rem 0 4rem 1.5rem;
     margin-bottom: .25rem;
+
+	> a {
+		display: inline-block;
+	}
 `;
 
 export const OfferTitle = styled.h3`

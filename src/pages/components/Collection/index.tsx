@@ -4,7 +4,7 @@ import { BsArrowRight } from 'react-icons/bs';
 import { CollectionSection, CollectionContainer, CollectionCard, CollectionData, CollectionName, ColectionDescription, CollectionImage } from './styles';
 
 import collection1 from '../../../assets/collection1.png';
-import collection2 from '../../../assets/collection1.png';
+import collection2 from '../../../assets/collection2.png';
 import Button from '../../../components/Button';
 
 export default function Collection() {

@@ -34,16 +34,6 @@ export const NewSneaker = styled.div`
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
 `;
 
-export const NewSneakerCard = styled.div`
-    position: relative;
-    padding: 3.5rem 1.5rem;
-    background-color: var(--dark-color-lighten);
-    border-radius: .5rem;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-`;
-
 export const NewSneakerOverlay = styled.div`
     position: absolute;
     left: 0;
@@ -55,6 +45,24 @@ export const NewSneakerOverlay = styled.div`
     align-items: center;
     background-color: rgba(138, 138, 138, .3);
     transition: .3s;
+`;
+
+export const NewSneakerCard = styled.div`
+    position: relative;
+    padding: 3.5rem 1.5rem;
+    background-color: var(--dark-color-lighten);
+    border-radius: .5rem;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+
+	&:hover {
+		bottom: 0;
+
+		${NewSneakerOverlay} {
+			bottom: 0;
+		}
+	}
 `;
 
 export const NewSneakerImg = styled.img`
