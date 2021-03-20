@@ -3,11 +3,11 @@ import { BsArrowRight } from 'react-icons/bs';
 
 import { WomenSection, WomenTitle, WomenContainer, WomenSneaker, WomenImg, WomenName, WomenPrice } from './styles';
 
-import women1 from '../../../assets/women1.png';
-import women2 from '../../../assets/women2.png';
-import women3 from '../../../assets/women3.png';
-import women4 from '../../../assets/women4.png';
-import Button from '../../../components/Button';
+import women1 from '../../assets/women1.png';
+import women2 from '../../assets/women2.png';
+import women3 from '../../assets/women3.png';
+import women4 from '../../assets/women4.png';
+import Button from '../Button';
 
 export default function WomenSneakers() {
 	return (

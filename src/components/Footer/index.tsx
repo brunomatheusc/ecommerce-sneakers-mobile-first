@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import Section from '../../../components/Section';
+import Section from '../Section';
 import { Container, FooterBox, FooterTitle, FooterDescription, FooterLink, FooterCopy } from './styles';
 import { GrFacebook, GrInstagram, GrTwitter, GrGoogle } from 'react-icons/gr';
 

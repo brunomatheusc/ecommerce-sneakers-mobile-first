@@ -1,5 +1,5 @@
 import React from 'react'
-import imgHome from '../../../assets/imghome.png';
+import imgHome from '../../assets/imghome.png';
 
 import { HomeSection, HomeContainer, HomeSneaker, HomeShape, HomeImage, HomeData, HomeNew, HomeTitle, HomeDescription, Button } from './styles';
 

@@ -2,10 +2,10 @@ import React from 'react';
 import { FeaturedSection, Title, Container, Sneaker, SneakerSale, SneakerImg, SneakerName, SneakerPrice } from './styles';
 import { BsArrowRight } from 'react-icons/bs';
 
-import featured1 from "../../../assets/featured1.png";
-import featured2 from "../../../assets/featured2.png";
-import featured3 from "../../../assets/featured3.png";
-import Button from '../../../components/Button';
+import featured1 from "../../assets/featured1.png";
+import featured2 from "../../assets/featured2.png";
+import featured3 from "../../assets/featured3.png";
+import Button from '../Button';
 
 export default function Featured() {
 	return (

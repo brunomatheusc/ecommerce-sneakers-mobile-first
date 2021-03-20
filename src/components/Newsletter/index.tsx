@@ -1,7 +1,7 @@
 import React from 'react';
-import Section from '../../../components/Section';
+import Section from '..//Section';
 import { NewsLetterContainer, NewsletterTitle, NewsletterDescription, NewsletterSubscribe, NewsletterInput } from './styles';
-import Button from '../../../components/Button';
+import Button from '../Button';
 
 export default function Newsletter() {
 	return (

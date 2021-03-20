@@ -1,8 +1,8 @@
 import React from 'react';
 import { OfferSection, OfferContainer, OfferData, OfferTitle, OfferDescription, OfferImg } from './styles';
 
-import offerImg from '../../../assets/offert.png';
-import Button from '../../../components/Button';
+import offerImg from '../../assets/offert.png';
+import Button from '../Button';
 
 export default function Offer() {
 	return (

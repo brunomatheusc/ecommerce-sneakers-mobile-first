@@ -1,10 +1,10 @@
 import { createGlobalStyle } from "styled-components";
 import { Nav, Menu, NavItem, NavList, NavToggle } from "../components/Header/styles";
-import { CollectionContainer, CollectionImage } from "../pages/components/Collection/styles";
-import { HomeContainer, HomeImage, HomeShape, HomeSneaker } from "../pages/components/Home/styles";
-import { NewContainer, NewMens, NewMensImg } from "../pages/components/NewCollection/styles";
-import { NewsLetterContainer, NewsletterDescription, NewsletterSubscribe } from "../pages/components/Newsletter/styles";
-import { OfferContainer, OfferData } from "../pages/components/Offer/styles";
+import { CollectionContainer, CollectionImage } from "../components/Collection/styles";
+import { HomeContainer, HomeImage, HomeShape, HomeSneaker } from "../components/Home/styles";
+import { NewContainer, NewMens, NewMensImg } from "../components/NewCollection/styles";
+import { NewsLetterContainer, NewsletterDescription, NewsletterSubscribe } from "../components/Newsletter/styles";
+import { OfferContainer, OfferData } from "../components/Offer/styles";
 
 export default createGlobalStyle`
 	:root {
