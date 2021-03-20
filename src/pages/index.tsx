@@ -11,8 +11,9 @@ import NewCollection from './components/NewCollection';
 import Button from '../components/Button';
 import Newsletter from './components/Newsletter';
 import Footer from './components/Footer';
+import Home from './components/Home';
 
-export default function Home() {
+export default function Index() {
 	return (
 		<>
 			<Head>
@@ -23,22 +24,7 @@ export default function Home() {
 			<Header />
 
 			<Main>
-				<HomeSection id="home">
-					<Container className="bd-grid">
-						<Sneaker>
-							<Shape />
-							<HomeImage src={imgHome} alt=""/>
-						</Sneaker>
-
-						<Data>
-							<New>New in</New>
-							<Title>YEEZY BOOST <br/> SPLY - 350</Title>
-							<Description>Explore the new collections of sneakers</Description>
-							
-							<Button href="#">Explore now</Button>
-						</Data>
-					</Container>
-				</HomeSection>
+				<Home />
 
 				<Featured />
 

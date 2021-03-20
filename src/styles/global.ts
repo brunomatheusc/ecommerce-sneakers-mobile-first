@@ -1,4 +1,10 @@
 import { createGlobalStyle } from "styled-components";
+import { Nav, Menu, NavItem, NavList, NavToggle } from "../components/Header/styles";
+import { CollectionContainer, CollectionImage } from "../pages/components/Collection/styles";
+import { HomeContainer, HomeImage, HomeShape, HomeSneaker } from "../pages/components/Home/styles";
+import { NewContainer, NewMens, NewMensImg } from "../pages/components/NewCollection/styles";
+import { NewsLetterContainer, NewsletterDescription, NewsletterSubscribe } from "../pages/components/Newsletter/styles";
+import { OfferContainer, OfferData } from "../pages/components/Offer/styles";
 
 export default createGlobalStyle`
 	:root {
@@ -39,6 +45,132 @@ export default createGlobalStyle`
 				--biggest-font-size: 3rem;
 				--normal-font-size: 1rem;
 				--smalle-font-size: .875rem;
+			}
+		}
+
+		@media screen and (min-width: 576px) {
+			${CollectionContainer} {
+				grid-template-columns: 415px;				
+			}
+
+			${CollectionImage} {
+				width: 260px;				
+			}
+
+			${OfferContainer} {
+				grid-template-columns: max-content max-content;				
+			}
+
+			${OfferData} {
+				text-align: center;				
+			}
+
+			${NewMens} {
+				align-items: center;				
+			}
+		}
+
+		@media screen and (min-width: 768px) {
+			body {
+				margin: 0;
+			}			
+
+			.section {
+				padding: 7rem 0 3rem;
+			}
+
+			.section-title::after {
+				width: 76px;
+			}
+
+			${Nav} {
+				height: calc(var(--header-height) + 1.5rem);				
+			}
+
+			${Menu} {
+				margin-left: auto;
+			}
+
+			${NavList} {
+				display: flex;
+			}
+
+			${NavItem} {
+				margin-left: var(--mb-6);
+				margin-bottom: 0;
+			}
+
+			${NavToggle} {
+				display: none; 
+			}
+
+			${HomeContainer} {
+				height: 100vh;
+				grid-template-columns: max-content max-content;
+				justify-content: center;
+				align-items: center;				
+			}
+
+			${HomeSneaker} {
+				order: 1;
+			}
+
+			${HomeShape} {
+				width: 376px;
+				height: 376px;
+			}
+
+			${HomeImage} {
+				width: 470px;
+				top: 3.5rem;
+				right: 0;
+				left: -3rem; 
+			}
+
+			${NewsLetterContainer} {
+				grid-template-columns: max-content max-content;
+				justify-content: center;
+				align-items: center;
+				padding: 4.5rem 2rem;
+				column-gap: 3rem;				
+			}
+
+			${NewsletterDescription} {
+				margin-bottom: 0;				
+			}
+
+			${NewsletterSubscribe} {
+				width: 360px;
+        		height: max-content;				
+			}
+		}
+
+		@media screen and (min-width: 1024px) {
+			.bd-grid {
+				margin-left: auto;
+				margin-right: auto;
+			}
+
+			${HomeContainer} {
+				column-gap: 8rem;				
+			}
+
+			${CollectionContainer} {
+				grid-template-columns: repeat(2, 415px);				
+			}
+
+			${NewContainer} {
+				grid-template-columns: max-content 1fr;				
+			}
+
+			${NewMens} {
+				align-items: initial;
+				justify-content: flex-end;
+				padding: 4rem 2rem;				
+			}
+
+			${NewMensImg} {
+				margin-bottom: var(--mb-6);
 			}
 		}
 	}

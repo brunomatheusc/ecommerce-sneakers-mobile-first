@@ -38,22 +38,18 @@ export const Container = styled.header`
 `;
 
 export const Nav = styled.nav`
-	max-width: 1024px;
-	display: grid;
-	grid-template-columns: 100%;
-	column-gap: 2rem;
-	width: calc(100% - 2rem);
-	margin-left: var(--mb-2);
-	margin-right: var(--mb-2);
-
 	height: var(--header-height);
-	display: flex;
+	display: flex !important;
 	justify-content: space-between;
 	align-items: center;
 
 	> a {
 		font-weight: var(--font-semi-bold) !important;
 	}
+`;
+
+export const NavList = styled.ul`
+	display: flex;
 `;
 
 export const NavItem = styled.li<{active: boolean}>`

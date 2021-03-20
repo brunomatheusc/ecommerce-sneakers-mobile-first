@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const Container = styled.div`
+export const NewsLetterContainer = styled.div`
     background-color: var(--dark-color);
     color: var(--white-color);
     padding: 2rem .5rem;
