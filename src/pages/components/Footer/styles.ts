@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));  
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)) !important;  
 `;
 
 export const FooterBox = styled.div`

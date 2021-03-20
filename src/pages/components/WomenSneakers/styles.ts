@@ -10,7 +10,7 @@ export const WomenTitle = styled.h2`
 
 export const WomenContainer = styled.div`
     row-gap: 2rem;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)) !important;
 `;
 
 export const WomenSneaker = styled.article`
