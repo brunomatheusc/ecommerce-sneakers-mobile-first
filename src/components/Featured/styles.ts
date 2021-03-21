@@ -8,7 +8,7 @@ export const Title = styled.h2`
 
 `;
 
-export const Container = styled.div`
+export const FeaturedContainer = styled.div`
     row-gap: 2rem;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)) !important;
 `;

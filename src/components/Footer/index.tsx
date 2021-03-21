@@ -28,17 +28,17 @@ export default function Footer() {
 					<FooterTitle>SUPPORT</FooterTitle>
 
 					<ul>
-						<FooterLink><Link href="#">Product Help</Link></FooterLink>
-						<FooterLink><Link href="#">Customer Care</Link></FooterLink>
-						<FooterLink><Link href="#">Authorized service</Link></FooterLink>
+						<FooterLink><Link href="/">Product Help</Link></FooterLink>
+						<FooterLink><Link href="/">Customer Care</Link></FooterLink>
+						<FooterLink><Link href="/">Authorized service</Link></FooterLink>
 					</ul>
 				</FooterBox>
 
 				<FooterBox>
-					<Link href="#"><GrFacebook /></Link>
-					<Link href="#"><GrInstagram /></Link>
-					<Link href="#"><GrTwitter /></Link>
-					<Link href="#"><GrGoogle /></Link>
+					<a href="/"><GrFacebook /></a>
+					<a href="/"><GrInstagram /></a>
+					<a href="/"><GrTwitter /></a>
+					<a href="/"><GrGoogle /></a>
 				</FooterBox>
 			</Container>
 

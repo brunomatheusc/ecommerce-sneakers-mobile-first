@@ -11,7 +11,7 @@ import Button from '../Button';
 
 export default function WomenSneakers() {
 	return (
-		<WomenSection className="section">
+		<WomenSection className="section" id="women">
 			<WomenTitle className="section-title">WOMEN SNEAKERS</WomenTitle>
 
 			<WomenContainer className="bd-grid">

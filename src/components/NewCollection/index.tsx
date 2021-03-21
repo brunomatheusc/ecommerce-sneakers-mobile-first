@@ -14,14 +14,14 @@ import SectionTitle from '../SectionTitle';
 
 export default function NewCollection() {
 	return (
-		<Section>
+		<Section id="new">
 			<SectionTitle>New Collection</SectionTitle>
 			
 			<NewContainer className="bd-grid">
 				<NewMens>
 					<NewMensImg src={new1} />
 					<NewTitle>Mens Shoes</NewTitle>
-					<NewPrice>From 179.99</NewPrice>
+					<NewPrice>From $179.99</NewPrice>
 					<Button href="#" type="light">View Collection <BsArrowRight /></Button>
 				</NewMens>
 

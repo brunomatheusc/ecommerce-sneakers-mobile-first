@@ -5,6 +5,14 @@ import Link from 'next/link';
 
 export default function Header() {
 	const [showMenu, setShowMenu] = useState(false);
+	const [active, setActive] = useState(false);
+
+	function handleActive(event: React.MouseEvent<HTMLLIElement>) {
+		console.log(event.target);
+		// console.log(window.location.hash);
+		// console.log(document.querySelector(window.location.hash));
+		setShowMenu(false);
+	}
 
 	return (
 		<Container className="l-header">
@@ -17,11 +25,11 @@ export default function Header() {
 
 				<Menu className="nav__menu" show={showMenu}>
 					<NavList className="nav__list">
-						<NavItem className="nav__item" onClick={() => setShowMenu(false)} active={true}><Link href="/">Home</Link></NavItem>
-						<NavItem className="nav__item" onClick={() => setShowMenu(false)} active={false}><Link href="#">Featured</Link></NavItem>
-						<NavItem className="nav__item" onClick={() => setShowMenu(false)} active={false}><Link href="#">Women</Link></NavItem>
-						<NavItem className="nav__item" onClick={() => setShowMenu(false)} active={false}><Link href="#">New</Link></NavItem>
-						<NavItem className="nav__item" onClick={() => setShowMenu(false)} active={false}><Link href="#">Shop</Link></NavItem>
+						<NavItem className="nav__item" onClick={(e) => handleActive(e)} active={true}><Link href="#home">Home</Link></NavItem>
+						<NavItem className="nav__item" onClick={(e) => handleActive(e)} active={true}><Link href="#featured">Featured</Link></NavItem>
+						<NavItem className="nav__item" onClick={(e) => handleActive(e)} active={false}><Link href="#women">Women</Link></NavItem>
+						<NavItem className="nav__item" onClick={(e) => handleActive(e)} active={false}><Link href="#new">New</Link></NavItem>
+						<NavItem className="nav__item" onClick={(e) => handleActive(e)} active={false}><Link href="/shop">Shop</Link></NavItem>
 					</NavList>
 				</Menu>
 

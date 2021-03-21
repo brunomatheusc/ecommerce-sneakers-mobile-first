@@ -1,5 +1,5 @@
 import React from 'react';
-import { FeaturedSection, Title, Container, Sneaker, SneakerSale, SneakerImg, SneakerName, SneakerPrice } from './styles';
+import { FeaturedSection, Title, FeaturedContainer, Sneaker, SneakerSale, SneakerImg, SneakerName, SneakerPrice } from './styles';
 import { BsArrowRight } from 'react-icons/bs';
 
 import featured1 from "../../assets/featured1.png";
@@ -9,10 +9,10 @@ import Button from '../Button';
 
 export default function Featured() {
 	return (
-		<FeaturedSection className="section">
+		<FeaturedSection className="section" id="featured">
 			<Title className="section-title">FEATURED</Title>
 
-			<Container className="bd-grid">
+			<FeaturedContainer className="bd-grid">
 				<Sneaker>
 					<SneakerSale>Sale</SneakerSale>
 					<SneakerImg src={featured1} />
@@ -36,7 +36,7 @@ export default function Featured() {
 					<SneakerPrice>$149.99</SneakerPrice>
 					<Button href="#" type="light">Add to Cart <BsArrowRight /></Button>
 				</Sneaker>
-			</Container>
+			</FeaturedContainer>
 		</FeaturedSection>
 	);
 }
