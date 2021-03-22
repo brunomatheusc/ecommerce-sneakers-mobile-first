@@ -10,20 +10,22 @@ export default function Header() {
 	const route = useRouter();
 
 	function handleActive(menu: string) {
-		const { hash } = window.location;
-
-		if (!hash) {
-			const path = route.pathname.replace('/', '');
-
-			if (path) {
-				return (path == menu) ? true : false;
+		if (typeof window !== "undefined") {
+			const { hash } = window.location;
+	
+			if (!hash) {
+				const path = route.pathname.replace('/', '');
+	
+				if (path) {
+					return (path == menu) ? true : false;
+				}
+	
+				return false;
+			} else {
+				const replacedHash = hash.replace('#', '');
+	
+				return (replacedHash == menu) ? true : false;
 			}
-
-			return false;
-		} else {
-			const replacedHash = hash.replace('#', '');
-
-			return (replacedHash == menu) ? true : false;
 		}
 	}
 
