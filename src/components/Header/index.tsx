@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Container, Nav, NavToggle, NavItem, NavList, Menu } from './styles';
 import { BsGrid3X3Gap, BsBag } from 'react-icons/bs';
 import Link from 'next/link';
@@ -9,15 +9,21 @@ export default function Header() {
 
 	const route = useRouter();
 
+	useEffect(() => {
+		handleActive('home');
+	}, [])
+
 	function handleActive(menu: string) {
 		if (typeof window !== "undefined") {
 			const { hash } = window.location;
-	
+
 			if (!hash) {
 				const path = route.pathname.replace('/', '');
 	
 				if (path) {
 					return (path == menu) ? true : false;
+				} else if (route.pathname == "/" && menu == "home") {
+					return true;
 				}
 	
 				return false;
@@ -27,6 +33,8 @@ export default function Header() {
 				return (replacedHash == menu) ? true : false;
 			}
 		}
+
+		return false;
 	}
 
 	return (
@@ -38,17 +46,17 @@ export default function Header() {
 
 				<Link href="#">Roby</Link>
 
-				<Menu className="nav__menu" show={showMenu}>
-					<NavList className="nav__list">
-						<NavItem className="nav__item" active={handleActive('home')}><Link href="/#home">Home</Link></NavItem>
-						<NavItem className="nav__item" active={handleActive('featured')}><Link href="/#featured">Featured</Link></NavItem>
-						<NavItem className="nav__item" active={handleActive('women')}><Link href="/#women">Women</Link></NavItem>
-						<NavItem className="nav__item" active={handleActive('new')}><Link href="/#new">New</Link></NavItem>
-						<NavItem className="nav__item" active={handleActive('shop')}><Link href="/shop">Shop</Link></NavItem>
+				<Menu show={showMenu}>
+					<NavList>
+						<NavItem active={handleActive('home')}><Link href="/#home">Home</Link></NavItem>
+						<NavItem active={handleActive('featured')}><Link href="/#featured">Featured</Link></NavItem>
+						<NavItem active={handleActive('women')}><Link href="/#women">Women</Link></NavItem>
+						<NavItem active={handleActive('new')}><Link href="/#new">New</Link></NavItem>
+						<NavItem active={handleActive('shop')}><Link href="/shop">Shop</Link></NavItem>
 					</NavList>
 				</Menu>
 
-				<div className="nav__shop">
+				<div>
 					<BsBag />
 				</div>
 			</Nav>
