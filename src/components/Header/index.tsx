@@ -9,10 +9,6 @@ export default function Header() {
 
 	const route = useRouter();
 
-	useEffect(() => {
-		handleActive('home');
-	}, [])
-
 	function handleActive(menu: string) {
 		if (typeof window !== "undefined") {
 			const { hash } = window.location;
@@ -32,9 +28,9 @@ export default function Header() {
 	
 				return (replacedHash == menu) ? true : false;
 			}
+		} else {
+			return (menu == 'home') ? true : false;
 		}
-
-		return false;
 	}
 
 	return (
