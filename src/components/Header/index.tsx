@@ -2,16 +2,29 @@ import React, { useState } from 'react';
 import { Container, Nav, NavToggle, NavItem, NavList, Menu } from './styles';
 import { BsGrid3X3Gap, BsBag } from 'react-icons/bs';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 
 export default function Header() {
 	const [showMenu, setShowMenu] = useState(false);
-	const [active, setActive] = useState(false);
 
-	function handleActive(event: React.MouseEvent<HTMLLIElement>) {
-		console.log(event.target);
-		// console.log(window.location.hash);
-		// console.log(document.querySelector(window.location.hash));
-		setShowMenu(false);
+	const route = useRouter();
+
+	function handleActive(menu: string) {
+		const { hash } = window.location;
+
+		if (!hash) {
+			const path = route.pathname.replace('/', '');
+
+			if (path) {
+				return (path == menu) ? true : false;
+			}
+
+			return false;
+		} else {
+			const replacedHash = hash.replace('#', '');
+
+			return (replacedHash == menu) ? true : false;
+		}
 	}
 
 	return (
@@ -25,11 +38,11 @@ export default function Header() {
 
 				<Menu className="nav__menu" show={showMenu}>
 					<NavList className="nav__list">
-						<NavItem className="nav__item" onClick={(e) => handleActive(e)} active={true}><Link href="#home">Home</Link></NavItem>
-						<NavItem className="nav__item" onClick={(e) => handleActive(e)} active={true}><Link href="#featured">Featured</Link></NavItem>
-						<NavItem className="nav__item" onClick={(e) => handleActive(e)} active={false}><Link href="#women">Women</Link></NavItem>
-						<NavItem className="nav__item" onClick={(e) => handleActive(e)} active={false}><Link href="#new">New</Link></NavItem>
-						<NavItem className="nav__item" onClick={(e) => handleActive(e)} active={false}><Link href="/shop">Shop</Link></NavItem>
+						<NavItem className="nav__item" active={handleActive('home')}><Link href="/#home">Home</Link></NavItem>
+						<NavItem className="nav__item" active={handleActive('featured')}><Link href="/#featured">Featured</Link></NavItem>
+						<NavItem className="nav__item" active={handleActive('women')}><Link href="/#women">Women</Link></NavItem>
+						<NavItem className="nav__item" active={handleActive('new')}><Link href="/#new">New</Link></NavItem>
+						<NavItem className="nav__item" active={handleActive('shop')}><Link href="/shop">Shop</Link></NavItem>
 					</NavList>
 				</Menu>
 

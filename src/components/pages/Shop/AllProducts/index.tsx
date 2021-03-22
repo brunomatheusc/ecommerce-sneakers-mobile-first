@@ -15,7 +15,7 @@ import women1 from '../../../../assets/women1.png';
 
 export default function AllProducts() {
 	return (
-		<FeaturedSection className="section">
+		<FeaturedSection className="section" id="shop">
 			<SectionTitle>All Products</SectionTitle>
 
 			<FeaturedContainer className="bd-grid">
